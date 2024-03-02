@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Maps</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+
+  </head>
+  <body>
+
+    
+  
+        <div class="container-content">
+            <h1>Discover Coordinates or Search by latitude & longitude</h1>
+            <input type="radio" name="markerType" value="single" id="singleMarker" checked>
+            <label for="singleMarker">Single Marker</label>
+
+            <input type="radio" name="markerType" value="multiple" id="multipleMarkers">
+            <label for="multipleMarkers">Multiple Markers</label>
+
+            <input type="file" id="excelFileInput" accept=".xlsx, .xls" style="display: none;">
+
+            
+            <button id="importExcelButton" onclick="importExcel()">Import Excel</button>
+            <div class="container">
+                <label for="latitude">Latitude</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" id="latitude" name="latitude" style="color: black;" required>
+
+                <label for="longitude">Longitude</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" id="longitude" name="longitude" style="color: black;" required>
+
+                <label for="information">Information About Map</label>
+                &nbsp;&nbsp;&nbsp;
+                <textarea id="information" name="information" style="color: black;"></textarea required>
+
+                
+                <button type="submit" id="searchButton" onclick="Initmap()">Search</button>
+                <button id="saveChangesButton" style="display: none;" onclick="saveChanges()">Save Changes</button>
+                <button id="cancelButton" style="display: none;" onclick="cancelChanges()">Cancel</button>
+
+            </div>
+         </div>
+
+        
+
+    
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Edit Marker</h2>
+      <label for="editLatitude">Latitude</label>
+      <input type="number" id="editLatitude" name="editLatitude" required >
+  
+      <label for="editLongitude">Longitude</label>
+      <input type="number" id="editLongitude" name="editLongitude" required>
+  
+      <label for="editInformation">Information About Map</label>
+      <textarea id="editInformation" name="editInformation" required></textarea>
+  
+      <button type="button" onclick="saveChanges()">Save Changes</button>
+    </div>
+  </div>
+  
+
+    <div id="map"></div> 
+
+ 
+
+<div class="table-container">
+    <h2>Markers Table</h2>
+    <table id="markers-table">
+      <thead>
+        <tr>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>Information</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button type="button" onclick="updatePolyline();">Add Polylines</button>
+    <button type="button" onclick="clearPolyline();">Clear Polylines</button>
+  </div>
+  
+<h1 id="bottom">© Google Maps</h1>
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHa0THDQTfC-ZnJfEpVXsmK5UvogCbPG4&callback=initMap&libraries=geometry&v=weekly">
+    </script>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

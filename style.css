@@ -1,0 +1,209 @@
+body, h3, h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+
+}
+
+
+
+#map {
+  height: 70%;
+  margin-right: 200px;
+
+}
+
+
+html, body {
+    height: 100%;
+    background-color: #d7e055;
+}
+.container-content{
+    color: #6a1b9a;
+    background-color: #d7e055;
+    width: calc(100% - 300px);
+    margin: 0 auto;
+    padding: 20px;
+    margin-right: 400px;
+
+    border-radius: 5px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.container label,
+.container input,
+.container textarea {
+    margin-bottom: 10px;
+    color: #6a1b9a;;
+    
+}
+
+.container input,
+.container textarea {
+    
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#bottom{
+  color: #6a1b9a;;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 90%;
+  left: 35%;
+  font-size: 50px;
+  padding-top: 20px;
+
+}
+
+.container button {
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.table-container {
+    
+    width: 60%;
+    margin: 0px auto;
+   
+     position: absolute; 
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 97.9%;
+    background-color: #d7e055;
+    color: #6a1b9a;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #markers-table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  
+  }
+  
+  #markers-table th, #markers-table td {
+    
+    border: 0.7px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  #markers-table th {
+    background-color: #4ca;
+    color: white;
+  }
+  
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+  }
+  
+  .modal-content {
+    background-color: rgb(204, 168, 68);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+ 
+.sidebar {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: white;
+  transition: 0.5s;
+}
+
+
+.sidebar a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+
+.sidebar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.content {
+  margin-left: 150px;
+  padding: 16px;
+}
+
+.container, .modal-content {
+  /* Your existing styling for the container */
+  /* Add or modify styles as needed */
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container-content {
+  /* Your existing styles */
+  /* Add or modify styles as needed */
+  display: block; /* Initially show the container */
+}
+
+#importExcelButton {
+  display: none; /* Initially hide the import button */
+}
+
